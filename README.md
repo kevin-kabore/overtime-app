@@ -15,13 +15,13 @@
 - Needs to be documented if employee did not log Overtime
 
 ## UI
-Bootstrap -> formatting
+- Bootstrap -> formatting
 
 ## Libraries
-  - Devise for User Auth
-  - Administrate gem
-  - Bootstrap
-  - Twilio
-  - Dotenv gem to protect credentials
-  - Rspec for testing
-  - Capybara for integration testing
+- Devise for User Auth
+- Administrate gem
+- Bootstrap
+- Twilio
+- Dotenv gem to protect credentials
+- Rspec for testing
+- Capybara for integration testing
