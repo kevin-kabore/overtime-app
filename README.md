@@ -23,5 +23,5 @@
 - Bootstrap
 - Twilio
 - Dotenv gem to protect credentials
-- Rspec for testing
-- Capybara for integration testing
+- Rspec for all automated testing
+- Capybara for integration testing (mimicing browser sessions to mimic login etc)
