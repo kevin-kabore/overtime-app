@@ -4,7 +4,7 @@
 
 ## Models
 - Post -> data:date rationale:text
-- User -> Devise
+X User -> Devise
 - AdminUser -> Single Table Inheritance
 
 ## Features
