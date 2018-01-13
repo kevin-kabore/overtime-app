@@ -5,7 +5,7 @@
 ## Models
 - Post -> data:date rationale:text
 X User -> Devise
-- AdminUser -> Single Table Inheritance
+X AdminUser -> Single Table Inheritance
 
 ## Features
 - Approval Workflow
