@@ -13,11 +13,21 @@ ActiveRecord::Migration.maintain_test_schema!
 RSpec.configure do |config|
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
   config.use_transactional_fixtures = false
-  config.before(:suite) { DatabaseCleaner.clean_with(:truncation) }
-  config.before(:each) { DatabaseCleaner.strategy = :transaction }
-  config.before(:each, :js => true) { DatabaseCleaner.strategy = :truncation }
-  config.before(:each) { DatabaseCleaner.start }
-  config.after(:each) { DatabaseCleaner.clean }
+  config.before do
+    DatabaseCleaner.strategy = :transaction
+  end
+  config.before :each, driver: :selenium do
+    DatabaseCleaner.strategy = :truncation
+  end
+  config.before do
+    DatabaseCleaner.start
+  end
+  config.after :each, driver: :selenium do
+    load "#{Rails.root}/db/seeds.rb"
+  end
+  config.after do
+    DatabaseCleaner.clean
+  end
   config.infer_spec_type_from_file_location!
   config.filter_rails_from_backtrace!
 end

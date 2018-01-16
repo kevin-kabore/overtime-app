@@ -31,7 +31,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem 'selenium-webdriver'
+gem 'geckodriver-helper'
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails', '~> 3.0'
